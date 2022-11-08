@@ -1,13 +1,21 @@
 /**
  * Implementa la serie de Fibonacci
- * @param {*} n: número de elementos de la serie.
- * @returns vector con la serie de Fibonacci.
- * @author: Sustituye tu nombre y apellidos aquí
+ * param {*} n: número de elementos de la serie.
+ * returns vector con la serie de Fibonacci.
+ * author: Sustituye tu nombre y apellidos aquí
  */
 function fibonacci(n)
 {
     let vector=new Array(); // Creamos un vector para alamcenar el cálculo
-    
+    let i=0;
+    do{
+        
+        console.log(i);
+        if (i == 1 || i == 0){vector[i] = 1;i++;continue;};
+        vector[i]= vector[i-2]+vector[i-1];
+        console.log("v"+vector[i-1]);
+        i++;
+    }while(i<n)
     
     // ESCRIBE TU CÓDIGO AQUÍ
     
@@ -17,7 +25,7 @@ function fibonacci(n)
 
 /**
  * Aplicación principal Ejercicio 7
- * @author: José Gaspar Sánchez García
+ * author: José Gaspar Sánchez García
  */
 function appMain()
 {
