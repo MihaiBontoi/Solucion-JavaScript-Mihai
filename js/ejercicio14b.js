@@ -23,7 +23,7 @@
   }
 function calcularMedia(v)
 {
-    
+    if (v.length <= 0){return v}
     let resultado= v.reduce(getTotal) / v.length
     return resultado;
 }
@@ -34,6 +34,7 @@ function calcularMedia(v)
  */
 function calcularMinimo(v)
 {
+  if (v.length <= 0){return v}
     let resultado = v.reduce(getMin)
     return resultado;
 }
@@ -44,6 +45,7 @@ function calcularMinimo(v)
  */
 function calcularMaximo(v)
 {
+  if (v.length <= 0){return v}
     let resultado = v.reduce(getMax)
     return resultado;
 }
@@ -54,6 +56,7 @@ function calcularMaximo(v)
  */
 function contarAprobados(v)
 {
+  if (v.length <= 0){return v}
     let resultado = v.filter(checkAprovado).length
     return resultado;
 }
@@ -64,6 +67,7 @@ function contarAprobados(v)
  */
 function contarSuspensos(v)
 {
+  if (v.length <= 0){return v}
     let resultado = v.filter(checkSuspendido).length
     return resultado;;
 }
@@ -83,6 +87,7 @@ function appMain(){
     var n=-1;
     // Leemos notas desde teclado
     console.info(`Leemos ${numeroNotas} Notas desde teclado.`)
+    if (numeroNotas >0){
     for(let i=0; i<numeroNotas;i++)
     {
         do{
@@ -91,8 +96,9 @@ function appMain(){
         notas[i]=n;
         console.log(`notas[${i}]: ${notas[i]}`);
     }
-
-
+  }
+  
+  console.log(notas)
     console.log("La nota media es "+calcularMedia(notas));
     console.log("La nota mínima es "+calcularMinimo(notas));
     console.log("La nota máxima es "+calcularMaximo(notas));

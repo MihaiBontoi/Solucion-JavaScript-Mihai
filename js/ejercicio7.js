@@ -8,6 +8,7 @@ function fibonacci(n)
 {
     let vector=new Array(); // Creamos un vector para alamcenar el cálculo
     let i=0;
+    if (n <= 0){return vector}
     do{
         
         console.log(i);

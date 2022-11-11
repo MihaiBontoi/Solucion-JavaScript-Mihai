@@ -6,6 +6,7 @@
  */
 function calcularMedia(v)
 {
+    if (v == 0){return 0;}
     let total= 0,resultado = 0;
     // IMPLEMENTA TU CODIGO AQUÍ
     for(let i=0; i<v.length ;i++)
@@ -24,6 +25,7 @@ function calcularMedia(v)
  */
 function calcularMinimo(v)
 {
+    if (v == 0){return 0;}
     let minima=Math.min.apply(Math, v); // <-- CORRIGE E IMPLEMENTA EL CODIGO
     
     return minima;
@@ -35,6 +37,7 @@ function calcularMinimo(v)
  */
 function calcularMaximo(v)
 {
+    if (v == 0){return 0;}
     let maxima=Math.max.apply(Math, v); // <-- CORRIGE E IMPLEMENTA EL CODIGO
 
     return maxima;
@@ -67,7 +70,7 @@ function contarSuspensos(v)
     let suspensos=0;
     for(let i=0; i<v.length ;i++)
     {   
-        if (v[i] <= 5){
+        if (v[i] < 5){
             suspensos++;}
         
     }
